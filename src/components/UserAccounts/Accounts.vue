@@ -2,7 +2,7 @@
   <div>
     <p>Accounts</p>
     <div v-bind:key='account.id' v-for='account in accounts'>
-      <AccountContent />
+      <AccountContent v-bind:account='account'/>
     </div>
   </div>
 </template>
