@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Accounts from './components/UserAccounts/Accounts'
+import Accounts from './components/UserAccounts/Accounts';
 import axios from 'axios';
 
 export default {
