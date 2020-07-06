@@ -4,7 +4,7 @@
       <div class="account-container-title" id="active-account-container-title">
         <h3>Active</h3>
       </div>
-      <AccountContent/>
+      <AccountContent v-bind:account='account' />
     </section>
   </section>
 </template>
@@ -13,6 +13,7 @@
 import AccountContent from './UserAccounts/AccountContent'
 export default {
   name: 'AccountContainer',
+  props: ['account'],
   components: {
     AccountContent
   }
