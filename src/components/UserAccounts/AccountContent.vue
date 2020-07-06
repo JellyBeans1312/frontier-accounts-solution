@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="account-container">
     <ul class="account-data-list">
       <li><label>Name: </label>{{account.LastName}}, {{account.FirstName}}</li>
       <li><label>Email: </label>{{account.Email}}</li>
@@ -18,5 +18,15 @@ export default {
 </script>
 
 <style scoped>
+  .account-data-list {
+    list-style: none;
+  }
+  .account-data-list > li {
+    margin: 10px 0;
+  }
+  .account-data-list > li > label {
+    font-weight: bold;
+    margin: 0 5px 0 0;
+  }
 
 </style>
