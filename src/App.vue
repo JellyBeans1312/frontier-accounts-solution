@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Accounts/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Accounts from './components/UserAccounts/Accounts'
+import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Accounts
+  },
+  data() {
+    return {
+      accounts: []
+    }
+  },
+  created() {
+    axios.get('https://frontiercodingtests.azurewebsites.net/api/accounts/getall')
+    .then(res => this.accounts = res.data)
+    .catch(error => console.log(error))
   }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
