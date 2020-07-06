@@ -4,7 +4,7 @@
   <div class="content-title-container">
     <h2>Accounts</h2>
     <div v-bind:key='account.id' v-for='account in accounts'>
-      <AccountContent v-bind:account='account'/>
+      <AccountContainer v-bind:account='account'/>
     </div>
     </div>
     </main>
@@ -12,12 +12,12 @@
 </template>
 
 <script>
-import AccountContent from './AccountContent'
+import AccountContainer from '../AccountContainer'
 export default {
   name: 'Accounts',
   props: ['accounts'],
   components: {
-    AccountContent
+    AccountContainer
   }
 }
 </script>
