@@ -4,7 +4,7 @@
       <div class="account-container-title" id="active-account-container-title">
         <h3>Active</h3>
       </div>
-
+      <AccountContent/>
     </section>
   </section>
 </template>
@@ -12,6 +12,9 @@
 <script>
 import AccountContent from './UserAccounts/AccountContent'
 export default {
-  name: 'AccountContainer'
+  name: 'AccountContainer',
+  components: {
+    AccountContent
+  }
 }
 </script>
