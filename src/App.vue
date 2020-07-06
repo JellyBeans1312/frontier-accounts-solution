@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Accounts/>
+    <section class="grid">
+      <Accounts v-bind:accounts='accounts'/>
+    </section>
   </div>
 </template>
 
